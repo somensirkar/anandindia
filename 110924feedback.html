@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>.: Anand Industries :.</title>
+<link href="../cimage24/110924text.css" rel="stylesheet" type="text/css" />
+<link href="../cimage24/110924style.css" rel="stylesheet" type="text/css">
+<link href="../cimage24/110924home-style.css" rel="stylesheet" type="text/css">
+<script async="" src="../cimage24/110924analytics.js"></script>
+<script type="text/javascript" src="../cimage24/110924jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.bannerAccordian > li').hover(function () {
+            var $this = $(this);
+            $('.bannerAccordian > li').stop().animate({ 'width': '192px' }, 500);
+            $this.stop().animate({ 'width': '324px' }, 500);
+            $this.find('.bannerSec').stop().animate({ 'height': '427px' }, 500, function () {
+                $this.find('.bannerSec2').fadeIn();
+            });
+            $this.find('.bannerSec h2').css({ 'padding-top': '35px', 'background': 'none' });
+        }, function () {
+            var $this = $(this);
+            $('.bannerAccordian > li').stop().animate({ 'width': '225px' }, 500);
+            $this.stop().animate({ 'width': '225px' }, 500);
+            $('.bannerSec').stop().animate({ 'height': '50px' }, 500);
+            $('.bannerSec2').fadeOut();
+            $this.find('.bannerSec h2').css({ 'padding-top': '15px', 'background': 'url(images/arrow-new.gif) no-repeat 0 0px' });
+        })
+        $('body').css({'background-color' : '#e5e5e5'}); 
+        
+    });
+</script>
+
+<link type="text/css" media="screen" rel="stylesheet" href="../cimage24/110924colorbox.css">
+<script type="text/javascript" src="../cimage24/110924jquery.min(1).js"></script>
+<script type="text/javascript" src="../cimage24/110924jquery.colorbox.js"></script>
+
+<script type="text/javascript">
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$("a[rel='example1']").colorbox();
+				$("a[rel='example2']").colorbox({transition:"fade"});
+				$("a[rel='example3']").colorbox({transition:"none", width:"75%", height:"75%"});
+				$("a[rel='example4']").colorbox({slideshow:true});
+				$(".example5").colorbox();
+				$("#example6").colorbox({iframe:true, innerWidth:590, innerHeight:400});
+				$("#example7").colorbox({iframe:true, innerWidth:590, innerHeight:348});
+				$("#example8").colorbox({iframe:true, innerWidth:590, innerHeight:310});
+				$("#example9").colorbox({iframe:true, innerWidth:590, innerHeight:272});
+				$("#example10").colorbox({iframe:true, innerWidth:590, innerHeight:453});
+				$("#example11").colorbox({iframe:true, innerWidth:590, innerHeight:438});
+				$(".example7").colorbox({width:"80%", height:"80%", iframe:true});
+				$(".example8").colorbox({width:"50%", inline:true, href:"#inline_example1"});
+				$(".example9").colorbox({
+/*					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }*/
+				});
+
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+ 
+    //rotation speed and timer
+    var speed = 5000; 
+     
+    var item_width = $('#slides li').outerWidth(); 
+    var left_value = item_width * (-1); 
+         
+    $('#slides li:first').before($('#slides li:last'));
+    $('#slides ul').css({'left' : left_value}); 
+ 
+    $('#next').click(function() {
+        var left_indent = parseInt($('#slides ul').css('left')) - item_width;
+        $('#slides ul').animate({'left' : left_indent}, 200, function () {
+            $('#slides li:last').after($('#slides li:first'));                  
+            $('#slides ul').css({'left' : left_value});
+        });
+        return false;         
+    });   
+  
+ 
+    $('#prev').click(function() {
+        var left_indent = parseInt($('#slides ul').css('left')) + item_width;
+        $('#slides ul').animate({'left' : left_indent}, 200,function(){    
+            $('#slides li:first').before($('#slides li:last'));           
+            $('#slides ul').css({'left' : left_value});
+        }); 
+        return false;             
+    });
+   
+    $('#slides').hover(
+         
+        function() {
+            clearInterval(run);
+        }, 
+        function() {
+            
+        }
+    ); 
+	   run = setInterval('rotate()', speed);   
+	   
+});
+ 
+function rotate() {
+    $('#next').click();
+}
+function showSubscribe() {
+    vSubscribeTo = document.getElementById("ddlSubscribeTo").value;
+    if (vSubscribeTo == "") {
+        alert("Please select subscribe to");
+        document.getElementById("ddlSubscribeTo").focus();
+        return false;
+    }
+    else {
+        document.form1.action = "subscribe/subscribe.asp?sub=" + vSubscribeTo;
+        document.form1.value = vSubscribeTo;
+        document.form1.submit();
+    }
+}
+  </script>
+  <script type="text/javascript">
+   $(function() {
+    var images = ['008.jpg', '009.jpg', '010.jpg'];
+	/*var images = ['samvaad.jpg'];*/
+    $('#flash-image').css({'background-image': 'url(home-images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+   });
+  </script>
+
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:30px;
+	z-index:1;
+	padding-top:40px;
+	margin-left:720px;
+}
+.style1 {font-weight: bold}
+</style>
+</head>
+
+<body style="background-color: rgb(229, 229, 229);">
+<script type="text/javascript">
+    $(function () {
+        
+        $('#nav').prepend("<div class='menuOverlay'></div>");
+	    $('#nav > li').hover(function(){
+		if($(this).children('.subnav').length > 0){
+		$('.menuOverlay').stop(true,true).fadeIn();
+		$('#nav > li > a').css({'color':'#536670','border':'1px solid #004165'});
+		$(this).find('a:first').css({'color':'#0083cb','border':'1px solid #bfbfbf','border-bottom':'1px solid #FFF','height':'37px'});
+		$(this).find('.subnav').stop(true,true).slideDown();
+		}else{            
+		$('#nav > li > a').css({'color':'#FFF','border':'1px solid #0083cb','height':'36px'});
+		$(this).find('a').css({'color':'#0083cb','border':'1px solid #bfbfbf'});
+            }
+		},
+		function(){
+		$('.subnav').stop(true,true).hide();
+		$('.menuOverlay').stop(true,true).hide();
+		$('#nav > li > a').css({'color':'#FFF','border':'1px solid #0083cb','height':'36px'});
+		})
+        
+      $('.topSearchBox').bind('focus', function(){
+          $(this).animate({'width':'150px'});
+          })
+          
+         $('.topSearchBox').bind('blur', function(){
+          $(this).animate({'width':'85px'});
+          })  
+
+    });
+</script>
+<script language="JavaScript" type="text/javascript">
+String.prototype.trim = function() {
+	return this.replace(/^\s+|\s+$/g,"");
+}
+
+	function search_chk()
+	{
+		
+     
+        if(document.frmSearch.SearchString.value.trim()=='')
+			{
+				alert("Please enter search phrase");
+				document.frmSearch.SearchString.focus();
+				return false;
+			}
+					if(document.frmSearch.SearchString.value.trim()=='')
+			{
+				alert("Please enter search phrase");
+				document.frmSearch.SearchString.focus();
+				return false;
+			}
+		else{
+					var str=document.frmSearch.SearchString.value.trim();
+					var filter = /^([\w\s-]+(?:\.[\w\s-]+)*)$/;
+					
+					if (filter.test(str))
+						{
+							if(! isNaN(str)) {
+								alert("Search phrase contains numbers!! Please check");
+								document.frmSearch.SearchString.focus();
+								return false;
+							} else {
+								document.frmSearch.action="/search-result.asp";
+								document.frmSearch.submit();
+							}
+						}
+						else
+						{
+							alert("Search phrase contains invalid symbol or numbers!! Please check");
+							return false;
+						}
+			}
+	}
+</script>
+<script type="text/javascript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  var s = selObj.options[selObj.selectedIndex].value;
+  window.open(s);
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><table width="971" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="629"><img src="../cimage24/110924logo.jpg" width="307" height="121" /></td>
+        <td width="342" align="right"><table width="381" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="21" align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="../cimage24/110924spacer.png" width="5" height="8" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="41%" align="right"><img src="../cimage24/110924phone.jpg" width="27" height="27" /></td>
+                <td width="1%">&nbsp;</td>
+                <td width="51%" align="left" class="text_bodya1">93393 09427 / 98312 79406</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="../cimage24/110924spacer.png" width="5" height="8" /></td>
+          </tr>
+          <tr>
+            <td align="right" class="text_bodya1">Helpline : 85849 82487</td>
+          </tr>
+          <tr>
+            <td><img src="../cimage24/110924spacer.png" width="5" height="8" /></td>
+          </tr>
+          <tr>
+            <td><table width="76%" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10%" align="center"><img src="../cimage24/110924phicon.jpg" width="22" height="22" /></td>
+                <td width="26%"><a href="110924contactus.html" class="contbut">Contact Us</a></td>
+                <td width="10%"><img src="../cimage24/110924feedicon.jpg" width="23" height="22" /></td>
+                <td width="24%"><a href="110924feedback.html" class="contbut">Feedback</a></td>
+                <td width="10%"><img src="../cimage24/110924siteicon.jpg" width="25" height="25" /></td>
+                <td width="20%"><a href="110924sitemap.html" class="contbut">Site Map</a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="41" align="center" bgcolor="#56bc32"><table width="971" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="43" align="center"><a href="110924.html" class="homebut">Home</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="64" align="center"><a href="110924aboutus.html" class="homebut">About Us</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="63" align="center"><a href="110924pressure.html" class="homebut">Pressure</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="88" align="center"><a href="110924temperature.html" class="homebut">Temperature</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="43" align="center"><a href="110924level.html" class="homebut">Level</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="40" align="center"><a href="110924flow.html" class="homebut">Flow</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="148" align="center"><a href="110924digital.html" class="homebut">Digital Process Control</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="128" align="center"><a href="110924humidity.html" class="homebut">Humidity &amp; Moisture</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="172" align="center"><a href="110924penumatic.html" class="homebut">Penumatic Control Valves</a></td>
+        <td width="4">&nbsp;</td>
+        <td width="106" align="center"><a href="110924otherproducts.html" class="homebut">Other Products</a></td>
+        <td width="5">&nbsp;</td>
+        <td width="36" align="center"><a href="110924randd.html" class="homebut">R &amp; D</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center"><div class="bannerPAnel">
+      <div class="center">
+        <div id="flash-image">
+          <div class="bannerAccordianHolder">
+            <ul class="bannerAccordian">
+              <!--<div id="apDiv1">
+      <p><a href="/sustainability/samvaad-a-tribal-conclave.asp" style="color:#8b0305;">Click here to know more...</a></p>
+      </div>-->
+              <li style="overflow: hidden; width: 225px; display: block;">
+                <div class="bannerSec" style="overflow: hidden; height: 50px; display: block;">
+                  <h2 style="padding-top: 15px;"><b>Glorious Service</b></h2>
+                  <div class="bannerSec2" style="display: none;"><img src="../cimage24/110924one-vision.jpg" width="208" height="291" alt="" />
+                    <a href="110924aboutus.html">Click to know more</a></div>
+                </div>
+              </li>
+              <li style="overflow: hidden; width: 225px; display: block;">
+                <div class="bannerSec" style="height: 50px; display: block; overflow: hidden;">
+                  <h2 style="padding-top: 5px;"><b>Green Energy with Eco Friendly instrumentation</b></h2>
+                  <div class="bannerSec2" style="display: none;"><img src="../cimage24/110924one-culture.jpg" width="208" height="291" alt="" />
+                   <a href="110924temperature.html">Click to know more</a></div>
+                </div>
+              </li>
+              <li style="overflow: hidden; width: 225px; display: block;">
+                <div class="bannerSec" style="height: 50px; display: block; overflow: hidden;">
+                  <h2 style="padding-top: 15px;"><b>Technology with Total Commitment</b></h2>
+                  <div class="bannerSec2" style="display: none;"><img src="../cimage24/110924one-commitment.jpg" width="208" height="291" alt="" />
+                    <a href="110924pressure.html">Click to know more</a></div>
+                </div>
+              </li>
+              <li style="overflow: hidden; width: 225px; display: block;">
+                <div class="bannerSec" style="height: 50px; display: block; overflow: hidden;">
+                  <h2 style="padding-top: 15px;"><b>Social Responsibility as a United Team</b></h2>
+                  <div class="bannerSec2" style="display: none;"><img src="../cimage24/110924one-brand.jpg" width="208" height="291" alt="" />
+                    <a href="110924.html">Click to know more</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><table width="971" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" class="text_bodye">Feedback </td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="485" align="center" valign="top"><form method="post" action="110924mail.php" target="_blank" onsubmit="return checkform(this);">
+<style type="text/css">
+<!--
+.capbox {
+	background-color: #92D433;
+	border: #B3E272 0px solid;
+	border-width: 0px 12px 0px 0px;
+	display: inline-block;
+	*display: inline; zoom: 1; /* FOR IE7-8 */
+	padding: 8px 40px 8px 8px;
+	}
+
+.capbox-inner {
+	font: bold 11px arial, sans-serif;
+	color: #000000;
+	background-color: #DBF3BA;
+	margin: 5px auto 0px auto;
+	padding: 3px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+#CaptchaDiv {
+	font: bold 17px verdana, arial, sans-serif;
+	font-style: italic;
+	color: #000000;
+	background-color: #FFFFFF;
+	padding: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+#CaptchaInput { margin: 1px 0px 1px 0px; width: 135px; }
+.style27 {font-family: Geneva, Arial, Helvetica, sans-serif}
+.style29 {font-size: 14px}
+-->
+</style>
+<table width="445" align="center" cellspacing="1">
+<tr>
+  <td height="30" colspan="4" align="center" valign="middle" class="text_bodyj"><strong>Please fill in the detail, 
+    so that&nbsp;we can get in touch with you</strong></td>
+  </tr>
+<tr>
+  <td height="20" colspan="4" valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td width="130" height="35" valign="middle" class="text_bodyd"><strong>Name (required)</strong></td>
+    <td width="28" height="35" align="center" valign="middle" class="text_bodyd"><strong>:</strong></td>
+    <td height="35" colspan="2" valign="middle">      <input type="text" name="name" required size="38" maxlength="120" placeholder="Enter Name Here"></td>
+</tr>
+<tr>
+<td height="35" valign="middle" class="text_bodyd"><strong>Email (required)</strong></td>
+    <td height="35" align="center" valign="middle" class="text_bodyd"><strong>:</strong></td>
+    <td height="35" colspan="2" valign="middle">      <input type="text" name="email" required size="38" maxlength="120" placeholder="Enter Email Here">    </td>
+</tr>
+<tr>
+<td height="35" valign="middle" class="text_bodyd"><strong>Mobile No.</strong></td>
+    <td height="35" align="center" valign="middle" class="text_bodyd"><strong>:</strong></td>
+    <td height="35" colspan="2" valign="middle">      <input name="phone" type="number" id="phone" size="30" maxlength="120" placeholder="Enter Mobile Here">    </td>
+</tr>
+<tr>
+  <td height="35" valign="middle" class="text_bodyd"><strong>Your City</strong></td>
+    <td height="35" align="center" valign="middle" class="text_bodyd"><strong>:</strong></td>
+    <td height="35" colspan="2" valign="middle">      <input type="text" name="city" size="38" maxlength="120" placeholder="Enter City Here">    </td>
+</tr>
+<tr>
+<td height="65" valign="top" class="text_bodyd"><strong>Your Address</strong></td>
+    <td height="65" align="center" valign="top" class="text_bodyd"><strong>:</strong></td>
+    <td height="65" colspan="2" valign="top">      <textarea type="text" name="addresscl" cols="30" rows="3" placeholder="Enter Address Here"></textarea></td>
+</tr>
+<tr>
+  <td height="65" valign="top" class="text_bodyd"><strong>Interested Items </strong></td>
+  <td height="65" align="center" valign="top" class="text_bodyd"><strong>:</strong></td>
+  <td height="65" colspan="2" valign="top">    <textarea name="interested_items" cols="30" rows="3" id="interested_items" type="text" placeholder="Enter Interested Items Here"></textarea>  </td>
+</tr>
+<tr>
+<td height="65" valign="top" class="text_bodyd"><strong>Comments </strong></td>
+    <td height="65" align="center" valign="top" class="text_bodyd"><strong>:</strong></td>
+    <td height="65" colspan="2" valign="top">      <textarea type="text" name="message" cols="30" rows="4" placeholder="Enter Your Message Here"></textarea>    </td>
+</tr>
+<tr>
+  <td height="35" valign="middle">&nbsp;</td>
+  <td height="35" valign="middle">&nbsp;</td>
+  <td height="35" colspan="2" valign="middle"><!-- START CAPTCHA -->
+<br>
+<div class="capbox">
+
+<div id="CaptchaDiv"></div>
+
+<div class="capbox-inner">
+Type the above number:<br>
+
+<input type="hidden" id="txtCaptcha">
+<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+</div>
+</div>
+<br><br>
+<!-- END CAPTCHA --></td>
+</tr>
+<tr>
+<td height="35" valign="middle">&nbsp;</td>
+  <td height="35" valign="middle">&nbsp;</td>
+  <td width="126" height="35" valign="middle"><input name="save" type="submit" value="Send enquiry"></td>
+  <td width="170" height="35" valign="middle"><input name="reset" type="reset" value="Start Over"></td>
+</tr>
+</table>
+<!--Enter clinet's Email here: anandinstruments@yahoo.com -->
+</form>
+<script type="text/javascript">
+
+// Captcha Script
+
+function checkform(theform){
+var why = "";
+
+if(theform.CaptchaInput.value == ""){
+why += "- Please Enter CAPTCHA Code.\n";
+}
+if(theform.CaptchaInput.value != ""){
+if(ValidCaptcha(theform.CaptchaInput.value) == false){
+why += "- The CAPTCHA Code Does Not Match.\n";
+}
+}
+if(why != ""){
+alert(why);
+return false;
+}
+}
+
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("CaptchaDiv").innerHTML = code;
+
+// Validate input against the generated number
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+if (str1 == str2){
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script></td>
+        <td width="486" align="center"><img src="../cimage24/110924feedback.png" width="450" height="402" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="125" align="center" bgcolor="#e5e5e5"><a href="110924.html">Home</a>&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;<a href="110924aboutus.html">About Us</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924pressure.html" target="_self">Pressure</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924temperature.html">Temperature</a> &nbsp;I&nbsp;&nbsp;<a href="110924level.html">Level</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924flow.html">Flow</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924digital.html">Digital Process Control</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924humidity.html">Humidity &amp; Moisture</a> &nbsp;I&nbsp;&nbsp;<a href="110924penumatic.html">Penumatic Control Valves</a> &nbsp;I&nbsp;    <a href="110924otherproducts.html">Other Products</a>&nbsp;&nbsp;I&nbsp;&nbsp;<a href="110924randd.html">R &amp; D<br />
+      <br />
+</a>&nbsp;<a href="110924contactus.html" target="_self">Contact Us</a>&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;<a href="110924feedback.html" target="_self">Feedback</a>&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;<a href="110924sitemap.html">Site Map </a><br />
+    <br />
+    <strong>Site Designed By :</strong> <a href="http://www.calcuttayellowpages.com" target="_blank">www.calcuttayellowpages.com</a></td>
+  </tr>
+</table>
+</body>
+</html>
